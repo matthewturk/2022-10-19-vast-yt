@@ -21,6 +21,9 @@ But, since then ... I've undergone a fair number of crises of confidence and I'v
 
 But today is not about me. <!-- .element: class="fragment" -->
 
+Also, we're a fair bit smaller than the talk you just heard, so let's all temper our expectations, OK? <!-- .element: class="fragment" -->
+
+
 ---
 
 ## Credits: `yt`
