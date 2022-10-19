@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+  </head>
+  <body>
+    <div id="vis-yt-citations"></div>
+
+    <script type="text/javascript">
+        var yourVlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+            "data": {
+                "url": "../data/yt_citations.json",
+                "format": {
+                    "parse": {"pubdate": "date:'%Y-%m-%d'"}
+                }
+            },
+            "transform": [
+                {"timeUnit": "year", "field": "pubdate", "as": "pubyear",
+                    "type": "temporal"},
+                {"aggregate": [{"op": "count", "as": "count"}], "groupby": ["pubyear"]},
+                {
+                    "sort": [{"field": "pubyear"}],
+                    "window": [{"op": "sum", "field": "count", "as": "cumulative_count"}],
+                    "frame": [null, 0]
+                },
+            ],
+            "hconcat": [ 
+                {
+                    "mark": "bar",
+                    "encoding": {
+                        "x": {
+                            "field": "pubyear",
+                            "type": "ordinal",
+                            "timeUnit": "year",
+                            "axis": { "values": [2011, 2013, 2015, 2017, 2019, 2021],
+                                      "title": "Year" }
+                        },
+                        "y": {
+                            "field": "cumulative_count",
+                            "type": "quantitative",
+                            "axis": {"title": "Cumulative Citations" }
+                        }
+                    },
+                    "config": {
+                        "axis": {"shortTimeLabels": true}
+                    }
+                },
+                {
+                    "mark": {"type": "bar"},
+                    "encoding": {
+                        "x": {
+                            "field": "pubyear",
+                            "timeUnit": "year",
+                            "type": "ordinal",
+                            "axis": { "values": [2011, 2013, 2015, 2017, 2019, 2021] ,
+                            "title": "Year"}
+                        },
+                        "y": {"field":"count", "type":"quantitative",
+                            "axis": {"title": "Citations" }}
+                    }
+                }
+            ],
+            "config": {
+                "axis": {
+                    "labelFontSize": 16,
+                    "titleFontSize": 16
+                },
+                "legend": {
+                    "labelFontSize": 16,
+                    "titleFontSize": 16
+                },
+            }
+        };
+
+        vegaEmbed('#vis-yt-citations', yourVlSpec, {'actions': false});
+    </script>
+  </body>
+</html>
