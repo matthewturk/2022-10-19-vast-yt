@@ -445,6 +445,10 @@ detail) inescapably influenced by colonialism and perceived exceptionalism, and 
 
 ---
 
+The line between community and clique is not always easy to identify in advance, and sometimes finding it happens far too late.
+
+---
+
 ## "I don't even know who you are anymore."
 
 I did not understand what it meant to be faculty or what it meant to be a "grown-up."
