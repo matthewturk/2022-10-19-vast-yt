@@ -359,7 +359,7 @@ I'll talk about four phases of yt development, which roughly correspond to the f
 
 <div class="fragment">
   <ol>
-   <li>The yt pre-1.0 and 1.x era (roughly 2007-2010)</li>
+   <li>The yt pre-1.0 and 1.x era (roughly 2006-2010)</li>
    <li>yt 2.0 era (roughly 2011-2014)</li>
    <li>yt 3.0 era (around 2014-2018ish)</li>
    <li>yt 4.0 and beyond (then until now and into the future)</li>
@@ -421,7 +421,7 @@ But I am worried.
 ## A Bunch Of One-Liners
 
 <ul>
-<li class="fragment">My experience is **not** transferrable.  And maybe it shouldn't be.</li>
+<li class="fragment">My experience is <b>not</b> transferrable.  And maybe it shouldn't be.</li>
 <li class="fragment">"Being right," about subjective topics, is a fluid concept and it is wrong to
 place too much stock into it.</li>
 <li class="fragment">There is always more to learn and that happens first by <i>listening</i>.  (And there are so many wonderful voices out there.)</li>
